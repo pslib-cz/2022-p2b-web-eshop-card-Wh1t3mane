@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #faebd6;
+        }
+
+        .line {
+            position: relative;
+            overflow: hidden;
+        }
+        .line__text {
+            position: absolute;
+            top: 2.5em;
+            right: 2.5em;
+            margin: 0;
+            padding: 1em;
+            min-width: 12em;
+            text-align: center;
+            transform: translateX(50%) rotate(45deg);
+            transform-origin: top center;
+        }
+        .line__text--green {
+            background-color: rgb(52, 191, 52);
+            color: white;
+        }
+
+        .corner {
+            background-color: #606fc9;
+            color: white;
+            border-right: 1em solid currentColor;
+            border-top: 1em solid transparent;
+            display: inline-block;
+            padding: 0 1em 1em;
+        }
+
+        .arrow {
+            background-color: #ccc149;
+            display: inline-block;
+            padding: 1em;
+            position: relative;
+        }
+        .arrow::before {
+            content: "";
+            width: 0em;
+            height: 0em;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -12px;
+            border: 12px solid transparent;
+            border-bottom: none;
+            border-top-color: #ccc149;
+        }
+        .fadeout p {
+            margin: 0; /*typography*/
+        }
+        .fadeout {
+            max-width: 40em; /*typography*/
+            
+            position: relative;
+            /*pro fixní výšku s proměnlivým množstvím textu*/
+            /*overflow: hidden;
+            max-height: 80px;*/
+        }
+        .fadeout::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: calc(1em + 1*1.15em);
+            background-image: linear-gradient(0deg, white 10%, transparent 75%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box line">
+        <p class="line__text line__text--green">Doprava zdarma</p>
+    </div>
+    <p class="corner">Akce</p>
+    <p class="arrow">Objednat zde</p>
+    <p>
+        &#9733; &#9733; &#9734; &#9734;
+    </p>
+    <div class="fadeout">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus pariatur tempore consectetur vero aliquam quae cum earum optio. Iste, quam numquam atque asperiores fugit tempore recusandae minima vel in facere.</p>
+        <p>Eveniet odit cupiditate officia. Maiores, sequi incidunt. Nihil, illo modi laboriosam deserunt error culpa voluptas veniam facilis porro, corrupti accusamus quam dolor.</p>
+    </div>
+</body>
+</html>

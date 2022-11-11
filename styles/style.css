@@ -1,0 +1,226 @@
+:root {
+    --white: #fff;
+    --black: black;
+    --red: #d2000d;
+    --blue: #039be5;
+    --orange: orange;
+    --p_gray: #6b6b6b;
+    --grey: grey;
+    --lightgray: lightgray;
+    --verylightgray: #cfcfcf;
+    --green: #00bc47;
+    --darkgreen: #008934;
+}
+
+/*Gallery*/
+.gallery {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill,minmax(32%,1fr));
+    margin: 0 0 1.8em;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.gallery__card {
+    /*max-width: 50%;*/
+    margin: 0.5em;
+    /*width: 100%;*/
+    max-width: 320px;
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;/*0.5em*/
+    padding: 0.5em;
+    align-self: center;
+    justify-self: center;
+}
+
+.gallery__card:hover {
+    box-shadow: 1px 8px 20px var(--grey);
+    -webkit-transition:  box-shadow .2s ease-in;
+}
+
+/*
+@media (max-width: 560px){
+    .gallery {
+        /*grid-template-columns: repeat(auto-fill,minmax(100%,1fr));*//*
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+}*/
+/*end*/
+
+/*Gallery Sale*/
+.gallery__sale {
+    position: relative;
+    overflow: hidden;
+}
+
+.sale__div {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.sale__ul {
+    margin: .6em;
+    padding: 0;
+}
+
+.sale__li {
+    display: block;
+    padding-bottom: 0.4em;
+}
+
+.sale__span {
+    padding: .2em .4em;
+}
+
+.sale__border {
+    border-radius: 14px 14px 14px 0;
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+.span1--color {
+    background-color: var(--red);
+}
+
+.span2--color {
+    background-color: var(--blue);
+}
+/*end*/
+
+/*Gallery Img*/
+.gallery__img {
+    padding: 2em;
+}
+
+.gallery__img--responsive {
+ width: 100%;
+ height: auto;
+}
+/*end*/
+
+/*Gallery Content*/
+.gallery__content__a--decoration {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.gallery__content__a--decoration:hover {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.gallery__content__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gallery__content__p {
+    margin: 1em 0;
+}
+
+.gallery__content__p--space {
+    margin: 0;
+}
+
+.gallery__content__p--size {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.gallery__content__p--strike {
+    font-size: 0.85rem;
+    text-decoration: line-through;
+    color: var(--p_gray);
+}
+
+.gallery__content__in-stock {
+    padding: 0.2em;
+    border-radius: 1.5em;
+    background-color: #e5f8ec;
+    color: #00bc47;
+}
+/*end*/
+
+/*Gallery Buy*/
+.gallery__buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gallery__buy_buttons {
+    margin: 0 .5rem 0 0;
+    border: 1px solid var(--verylightgray);
+    border-radius: 4px;
+}
+
+.gallery__buy__button_click {
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: .5rem;
+}
+
+.gallery__buy__button_click:hover {
+    background-color: #e4e4e4;
+    transition: background-color .2s;
+    cursor: pointer;
+    filter: grayscale(20%);
+}
+
+.gallery__buy__button_click--color {
+    color: var(--green);
+    background-color: #f1f1f1;
+    border: 1px solid var(--verylightgray);
+    border-bottom: 2px solid transparent;
+}
+
+.gallery__buy__button_click1 {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+}
+
+.gallery__buy__button_click2 {
+    border-radius: 0 4px 4px 0;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+}
+
+.gallery__buy__button_add {
+    text-align: center;
+    font-weight: 700;
+    border-radius: 4px;
+    min-width: 140px;
+    padding: .5rem;
+}
+
+.gallery__buy__button_add:hover {
+    cursor: pointer;
+    filter: grayscale(20%);
+}
+
+.gallery__buy__button_add--color {
+    color: #fff;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    border-bottom: 2px solid var(--darkgreen);
+}
+
+.gallery__buy_p--space {
+    margin: 0 0.5em;
+}
+/*end*/
